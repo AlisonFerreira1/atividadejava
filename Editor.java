@@ -1,17 +1,18 @@
-public class Editor {
-    private StringBuilder text = new StringBuilder();
 
-    public void write(String input) {
-        text.append(input);
+public class Editor {
+    private StringBuilder texto = new StringBuilder();
+
+    public void escrever(String entrada) {
+        texto.append(entrada);
     }
 
-    public void deleteLast(int count) {
-        if(count <= text.length()) {
-            text.delete(text.length() - count, text.length());
+    public void apagarUltimos(int quantidade) {
+        if(quantidade <= texto.length()) {
+            texto.delete(texto.length() - quantidade, texto.length());
         }
     }
 
-    public String getText() {
-        return text.toString();
+    public String getTexto() {
+        return texto.toString();
     }
 }
